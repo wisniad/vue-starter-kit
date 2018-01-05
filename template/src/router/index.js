@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
+/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require */
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
-    }
-  ]
+      component(resolve) {
+        require(['src/components/HelloWorld'], resolve)
+      },
+    },
+  ],
 })
+/* eslint-enable global-require */
+/* eslint-enable import/no-dynamic-require */
