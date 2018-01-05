@@ -17,6 +17,7 @@
     "test": "yarn test:unit && yarn test:e2e"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "normalize.css": "^7.0.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
