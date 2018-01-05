@@ -8,6 +8,8 @@ module.exports = {
   },
   env: {
     browser: true,
+    node: true,
+    mocha: true
   },
   extends: 'airbnb-base',
   // required to lint *.vue files
@@ -44,6 +46,10 @@ module.exports = {
       optionalDependencies: ['test/unit/index.js']
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // enforce single quotes
+    quotes: [ 2, 'single' ],
+    // enforce no semicolons
+    semi: ["error", "never"]
   }
 }
