@@ -10,9 +10,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
+      name: 'Home',
       component(resolve) {
-        require(['src/components/HelloWorld'], resolve)
+        require(['src/views/Home'], resolve)
       },
     },
   ],
