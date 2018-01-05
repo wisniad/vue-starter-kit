@@ -1,30 +1,59 @@
-# vue-starter-kit
+# {{ name }}
 
-> A Vue.js project
+#### Table of Contents
+- [Setup](#setup)
+- [Development](#development)
+- [Production](#production)
 
-## Build Setup
+## Setup
+#### Requirements
+- [NodeJS](https://nodejs.org), *>= 8.0.0*
+- [Yarn](https://yarnpkg.com/lang/en/), *>= 0.21.3*
 
-``` bash
-# install dependencies
-npm install
+## Development
+```bash
+# Clone repo and install deps
+yarn
+```
 
-# serve with hot reload at localhost:8080
-npm run dev
+```bash
+# Run dev server with hot reload at localhost:8080
+yarn dev
+```
 
-# build for production with minification
-npm run build
+#### Linters
+```bash
+# Run sass-lint
+yarn lint:sass
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# Run ESlint
+yarn lint:es
 
-# run unit tests
-npm run unit
+# Run all linters
+yarn lint
+```
 
-# run e2e tests
-npm run e2e
+#### Tests
+```bash
+# Run Unit tests
+yarn test:unit
+```
 
-# run all tests
-npm test
+```bash
+# Run e2e tests
+yarn test:e2e
+```
+
+## Production
+```bash
+# Build for production with minification
+yarn build
+
+# Build for production and view the bundle analyzer report
+yarn build --report
+
+# Run production server
+yarn start
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
