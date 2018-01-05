@@ -4,14 +4,17 @@
   "description": "{{ description }}",
   "author": "{{ author }}",
   "private": true,
+  "main": "src/main.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "unit": "jest --config test/unit/jest.conf.js --coverage",
-    "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "build": "node build/build.js"
+    "start": "yarn dev",
+    "build": "node build/build.js",
+    "lint:sass": "sass-lint --config .sass-lint.yml -v -q",
+    "lint:es": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
+    "lint": "yarn lint:sass && yarn lint:es",
+    "test:unit": "jest --config test/unit/jest.conf.js --coverage",
+    "test:e2e": "node test/e2e/runner.js",
+    "test": "yarn test:unit && yarn test:e2e"
   },
   "dependencies": {
     "normalize.css": "^7.0.0",
@@ -63,6 +66,7 @@
     "pug": "^2.0.0-rc.4",
     "pug-loader": "^2.3.0",
     "rimraf": "^2.6.0",
+    "sass-lint": "^1.12.1",
     "sass-loader": "^6.0.6",
     "selenium-server": "^3.0.1",
     "semver": "^5.3.0",
@@ -80,8 +84,9 @@
     "webpack-merge": "^4.1.0"
   },
   "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
+    "node": ">= 8.0.0",
+    "npm": ">= 3.0.0",
+    "yarn": ">= 0.21.3"
   },
   "browserslist": [
     "> 1%",
