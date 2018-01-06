@@ -1,0 +1,11 @@
+{
+  "name": "vue-starter-kit",
+  "dependencies": {},
+  "version": "1.0.0",
+  "repository": {
+    "url": "git@github.com:InventiStudio/vue-starter-kit.git",
+    "type": "git"
+  },
+  "author": "InventiStudio <hello@inventi.studio>",
+  "license": "MIT"
+}
