@@ -19,6 +19,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "normalize.css": "^7.0.0",
+    "promise-polyfill": "^7.0.0",
     "ramda": "^0.25.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",

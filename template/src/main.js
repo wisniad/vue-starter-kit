@@ -1,6 +1,9 @@
+import './polyfills'
+/* eslint-disable import/first */
 import Vue from 'vue'
 import Vuelidate from 'vuelidate'
 import { sync } from 'vuex-router-sync'
+/* eslint-enable import/first */
 import App from './App'
 import router from './router'
 import store from './store'
