@@ -9,6 +9,8 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "build": "node build/build.js",
     "start": "node build/prod.js",
+    "docker": "./deploy/docker.sh",
+    "deploy": "./deploy/deploy.sh",
     "lint:sass": "sass-lint --config .sass-lint.yml -v -q",
     "lint:es": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "lint": "yarn lint:sass && yarn lint:es",
