@@ -4,10 +4,19 @@
 </template>
 
 <script>
-  import { mapActions } from 'vuex'
+  import R from 'ramda'
+  import { mapGetters, mapActions } from 'vuex'
 
   export default {
     name: 'Home',
+    computed: {
+      ...mapGetters({
+        users: 'users/users',
+      }),
+      usersNames() {
+        return R.pluck('name')(this.users)
+      },
+    },
     methods: {
       ...mapActions({
         fetchUsers: 'users/fetch',

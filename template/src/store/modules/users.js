@@ -4,6 +4,10 @@ const state = {
   users: [],
 }
 
+const getters = {
+  users: state => state.users,
+}
+
 const mutations = {
   ADD(state, users) {
     users.forEach(user => state.users.push(user))
@@ -20,6 +24,7 @@ const actions = {
 export default {
   namespaced: true,
   state,
+  getters,
   mutations,
   actions,
 }
