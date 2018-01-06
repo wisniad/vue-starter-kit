@@ -9,7 +9,7 @@ const devConfigPromise = require('../../build/webpack.dev.conf')
 
 let server
 
-devConfigPromise.then(devConfig => {
+devConfigPromise.then((devConfig) => {
   const devServerOptions = devConfig.devServer
   const compiler = webpack(webpackConfig)
   server = new DevServer(compiler, devServerOptions)
