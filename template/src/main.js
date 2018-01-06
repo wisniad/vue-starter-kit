@@ -11,6 +11,10 @@ sync(store, router)
 
 Vue.config.productionTip = false
 
+// http://varun.ca/icon-component/
+const files = require.context('!svg-sprite-loader!./assets/icons', false, /.*\.svg$/)
+files.keys().forEach(files)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
