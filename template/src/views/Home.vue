@@ -1,6 +1,7 @@
 <template lang="pug">
   div.home
     img(src="~assets/logo.svg")
+    h1.c-white Hello from your awesome Vue.js project!
 </template>
 
 <script>
